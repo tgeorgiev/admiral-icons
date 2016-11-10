@@ -29,7 +29,7 @@ All brand icons are trademarks of their respective owners.
 
 Brand icons should only be used to represent the company or product to which they refer.
 
-Icon sources:
+### Icon sources:
 
 * library/alpine.png - <https://twitter.com/alpinelinux>
 * library/crate.png - <https://crate.io/>
@@ -49,10 +49,12 @@ Icon sources:
 * library/ubuntu.png - <http://design.ubuntu.com/downloads?metadata=element-logo+brand-ubuntu>
 * library/wordpress.png - <https://wordpress.org/about/logos/>
 
+- - -
 
 * kitematic/hello-world-nginx.png - <https://github.com/kitematic>
 * kitematic/minecraft.png - <http://www.rw-designer.com/icon-detail/5547>
 
+- - -
 
 * vmware/admiral_agent.png - <https://vmware.github.io/admiral/>
 * vmware/admiral.png - <https://vmware.github.io/admiral/>
