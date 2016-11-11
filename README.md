@@ -4,7 +4,7 @@ This is an unofficial repository containing product icons for customizing [Admir
 
 ## How it works?
 
-As described in the [official Admiral documentation](https://github.com/vmware/admiral/wiki/Customization#container-icons):
+As described in the [official Admiral documentation](https://github.com/vmware/admiral/wiki/Configuration-guide#customize-the-containers-and-images-icons):
 > For every image search, template definition, container instance or application, Admiral will look up for a resource in `container-images` folder of the defined user resources path based on the image's "namespace/reponame", so for example if you provision a container based on the `vmware/photon:1.0` image, it will lookup for a file `{user-resources-path}/container-icons/vmware/photon.png` and display it if such exists, otherwise it will default to an auto-generated identicon.
 
 Therefore when we provide this set of icons in Admiral's user resources path it will show more friendly product icons of all containers and applications that are based on those images.
@@ -12,8 +12,14 @@ Therefore when we provide this set of icons in Admiral's user resources path it 
 ## How to use?
 
 You can download the latest contents of this repository as zip by clicking [here](https://github.com/tgeorgiev/admiral-icons/archive/master.zip). Once the zip is downloaded, based on your setup there are 2 options:
-1. If running the Admiral Java process, extract the zip to your Admiral user resource folder (configured with the `container.user.resources.path` property, defaults to `/etc/xenon/user-resources/`).
-2. If running as container, extract the zip in a folder of your preference and run the Admiral container with:
+
+### Running the Admiral Java
+
+Extract the zip to your Admiral user resource folder (configured with the `container.user.resources.path` property, defaults to `/etc/xenon/user-resources/`).
+
+### Running as container
+
+Extract the zip in a folder of your preference and run the Admiral container with:
 
     `docker run -d -P -v {path-to-extracted-zip}/container-icons/:/etc/xenon/user-resources/container-icons/ vmware/admiral`
 
