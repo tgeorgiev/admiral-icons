@@ -1,6 +1,6 @@
 # Admiral icons
 
-This is an unofficial repository containing product icons for customizing [Admiral's](https://vmware.github.io/admiral/) template and application views.
+This is an unofficial repository containing product icons for customizing [VMware Admiral's](https://vmware.github.io/admiral/) template and application views.
 
 ## How it works?
 
