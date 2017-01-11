@@ -11,17 +11,23 @@ Therefore when we provide this set of icons in Admiral's user resources path it 
 
 ## How to use?
 
-You can download the latest contents of this repository as zip by clicking [here](https://github.com/tgeorgiev/admiral-icons/archive/master.zip). Once the zip is downloaded, based on your setup there are 2 options:
+There are few ways to use it, depending on the way you run Admiral:
 
-### Running the Admiral Java
+### Running Admiral in container by mounting a data container
+This is the simplest approach, as we provide a minimal container image in Docker hub named [tgeorgiev/admiral-icons](https://hub.docker.com/r/tgeorgiev/admiral-icons/) that includes the icons that you can use the volumes from. Then running the admiral container is as simple as:
 
-Extract the zip to your Admiral user resource folder (configured with the `container.user.resources.path` property, defaults to `/etc/xenon/user-resources/`).
+    docker create -v /etc/xenon/user-resources/container-icons --name admiral-icons tgeorgiev/admiral-icons /bin/true
+    docker run -d -P --volumes-from admiral-icons vmware/admiral
 
-### Running as container
+### Running Admiral in container by mounting a host directory
 
-Extract the zip in a folder of your preference and run the Admiral container with:
+For this purpose you need to download the contents of this repository as a zip by clicking [here](https://github.com/tgeorgiev/admiral-icons/archive/master.zip) and extract it in the folder somewhere in the host. Then you can run the admiral container as
 
-    `docker run -d -P -v {path-to-extracted-zip}/container-icons/:/etc/xenon/user-resources/container-icons/ vmware/admiral`
+    docker run -d -P -v {path-to-extracted-zip}/container-icons/:/etc/xenon/user-resources/container-icons/ vmware/admiral
+
+### Running Admiral locally with Java
+
+For this purpose you need to download the contents of this repository as a zip by clicking [here](https://github.com/tgeorgiev/admiral-icons/archive/master.zip) and extract it in your Admiral user resource folder (configured with the `container.user.resources.path` property, defaults to `/etc/xenon/user-resources/`).
 
 ## Contributing
 
